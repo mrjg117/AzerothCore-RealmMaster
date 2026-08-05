@@ -110,6 +110,12 @@ jobs:
         with:
           python-version: '3.11'
 
+      - name: Set execute permissions
+        run: |
+          chmod +x build-patched.sh
+          chmod +x build.sh
+          chmod +x setup.sh
+
       - name: Run patched build
         run: |
           BUILD_ARGS="--yes"
