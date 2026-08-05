@@ -485,9 +485,9 @@ resolve_project_image(){
 
 stage_modules(){
 
+  local src_path="$1"
   # ===== 应用自定义补丁 =====
   apply_patches "$src_path"
-  local src_path="$1"
   local storage_path
   storage_path="$(resolve_local_storage_path)"
 
